@@ -2,283 +2,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shani SK | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Branding Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #0b1020;
-            color: white;
-            line-height: 1.6;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f4ed;
+    color: #17221d;
+    line-height: 1.6;
+}
 
-        header {
-            background: #121a30;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            border-bottom: 1px solid #29334d;
-        }
+header {
+    background: #17221d;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .logo {
-            color: #77e6c3;
-            font-size: 25px;
-            font-weight: bold;
-        }
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #b9f36a;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+}
 
-        nav a:hover {
-            color: #77e6c3;
-        }
+nav a:hover {
+    color: #b9f36a;
+}
 
-        section {
-            padding: 80px 8%;
-        }
+.hero {
+    padding: 100px 8%;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-        }
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            line-height: 1.2;
-            margin: 15px 0;
-        }
+.hero h1 span {
+    color: #608b32;
+}
 
-        .hero h1 span {
-            color: #77e6c3;
-        }
+.hero p {
+    max-width: 650px;
+    color: #66736b;
+    margin-bottom: 25px;
+}
 
-        .hero p, .description {
-            color: #b4bfd5;
-            max-width: 650px;
-            margin-bottom: 25px;
-        }
+.btn {
+    display: inline-block;
+    width: fit-content;
+    background: #17221d;
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 6px;
+}
 
-        .btn {
-            display: inline-block;
-            background: #77e6c3;
-            color: #0b1020;
-            padding: 12px 22px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+section {
+    padding: 70px 8%;
+}
 
-        h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: #77e6c3;
-        }
+h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
+.subtitle {
+    color: #66736b;
+    margin-bottom: 30px;
+}
 
-        .card {
-            background: #121a30;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #29334d;
-        }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
 
-        .card h3 {
-            margin-bottom: 12px;
-        }
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid #dce2d8;
+}
 
-        .card p {
-            color: #b4bfd5;
-        }
+.card h3 {
+    margin-bottom: 12px;
+    color: #42652b;
+}
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+.card p, .card li {
+    color: #66736b;
+}
 
-        .skills span {
-            background: #182541;
-            padding: 10px 16px;
-            border-radius: 20px;
-            border: 1px solid #29334d;
-        }
+.card ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
 
-        .contact a {
-            color: #77e6c3;
-        }
+.dark {
+    background: #17221d;
+    color: white;
+}
 
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #121a30;
-            color: #b4bfd5;
-        }
+.dark .subtitle,
+.dark .card p,
+.dark .card li {
+    color: #d0d9d1;
+}
 
-        @media (max-width: 700px) {
-            header {
-                flex-direction: column;
-                gap: 12px;
-            }
+.dark .card {
+    background: #26342c;
+    border-color: #3a4b3f;
+}
 
-            nav a {
-                margin: 0 6px;
-                font-size: 14px;
-            }
+.colors {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
 
-            .hero h1 {
-                font-size: 36px;
-            }
+.color {
+    padding: 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
 
-            .cards {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+.green {
+    background: #b9f36a;
+    color: #17221d;
+}
+
+.cream {
+    background: #f5f4ed;
+    color: #17221d;
+}
+
+.black {
+    background: #17221d;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #dce2d8;
+    padding: 14px;
+    text-align: left;
+}
+
+th {
+    background: #b9f36a;
+}
+
+.contact {
+    text-align: center;
+    background: #b9f36a;
+}
+
+.contact p {
+    margin: 15px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 22px;
+    background: #17221d;
+    color: white;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">SHANI SK.</div>
+<header>
+    <div class="logo">BRANDCRAFT.</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#selection">Selection</a>
+        <a href="#audience">Audience</a>
+        <a href="#identity">Identity</a>
+        <a href="#content">Content</a>
+    </nav>
+</header>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<section class="hero" id="home">
+    <p>BRANDING & DIGITAL MARKETING PORTFOLIO</p>
 
-    <section class="hero" id="home">
-        <div>
-            <p>HELLO, WELCOME TO MY PORTFOLIO</p>
+    <h1>Build a Brand.<br>
+    Create an <span>Identity.</span></h1>
 
-            <h1>Hi, I'm <span>Shani SK</span><br>
-            BCA Student & Creative Thinker</h1>
+    <p>
+        A strategic approach to choosing the right brand,
+        identifying the target audience, creating a strong
+        brand identity, and planning engaging content.
+    </p>
 
+    <a href="#selection" class="btn">Explore My Portfolio</a>
+</section>
+
+<section id="selection">
+    <h2>01. Brand Selection</h2>
+    <p class="subtitle">
+        Selecting a brand concept that solves customer problems
+        and provides value.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Brand Concept</h3>
             <p>
-                I am learning programming, web development,
-                branding and content creation. I enjoy turning
-                creative ideas into useful digital experiences.
+                Sample brand: EcoLife — an eco-friendly lifestyle
+                brand offering reusable and sustainable products.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Brand Strategy</h3>
+            <ul>
+                <li>Research the market and competitors.</li>
+                <li>Identify customer needs.</li>
+                <li>Define the brand's unique value.</li>
+                <li>Establish brand goals and positioning.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="audience" class="dark">
+    <h2>02. Target Audience Identification</h2>
+    <p class="subtitle">
+        Understanding the people most likely to connect with
+        the brand and its products.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Demographics</h3>
+            <ul>
+                <li>Age: 18–30 years</li>
+                <li>Audience: Students and young professionals</li>
+                <li>Location: Urban and semi-urban areas</li>
+                <li>Interests: Lifestyle and sustainability</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Audience Behaviour</h3>
+            <ul>
+                <li>Uses Instagram and YouTube.</li>
+                <li>Looks for useful, affordable products.</li>
+                <li>Values honest brand communication.</li>
+                <li>Responds to educational and visual content.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="identity">
+    <h2>03. Branding Identity</h2>
+    <p class="subtitle">
+        Building a consistent visual style and brand personality.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Visual Identity</h3>
+            <p>
+                A clean, modern and natural design that communicates
+                simplicity, trust and sustainability.
             </p>
 
-            <a href="#projects" class="btn">Explore My Work</a>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-
-        <p class="description">
-            I am a Bachelor of Computer Applications (BCA) student
-            passionate about technology, creativity and learning
-            new skills. My goal is to become a skilled developer
-            and build meaningful digital projects.
-        </p>
-    </section>
-
-    <section id="skills">
-        <h2>My Skills</h2>
-
-        <div class="skills">
-            <span>Python</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Brand Selection</span>
-            <span>Target Audience Research</span>
-            <span>Brand Identity</span>
-            <span>Content Planning</span>
-            <span>Canva</span>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-
-        <div class="cards">
-            <div class="card">
-                <h3>Python Projects</h3>
-                <p>
-                    Beginner Python programs involving loops,
-                    functions, conditions and problem-solving.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Brand Identity</h3>
-                <p>
-                    A branding concept covering brand selection,
-                    audience research and visual identity.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Content Planning</h3>
-                <p>
-                    A social media content plan for creative
-                    videos, posts and digital campaigns.
-                </p>
+            <div class="colors">
+                <div class="color green">Lime Green</div>
+                <div class="color cream">Cream</div>
+                <div class="color black">Forest Dark</div>
             </div>
         </div>
-    </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
+        <div class="card">
+            <h3>Brand Personality</h3>
+            <ul>
+                <li>Brand name: EcoLife</li>
+                <li>Tagline: Small Choices, Better Future.</li>
+                <li>Values: Trust, simplicity and sustainability.</li>
+                <li>Tone: Friendly, positive and informative.</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-        <p class="description">
-            Interested in working together or discussing a project?
-            Feel free to contact me.
-        </p>
+<section id="content" class="dark">
+    <h2>04. Content Planning</h2>
+    <p class="subtitle">
+        A sample weekly content calendar for social media.
+    </p>
 
-        <!-- Replace this with your email -->
-        <p>Email:
-            <a href="mailto:your.email@example.com">
-                your.email@example.com
-            </a>
-        </p>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Content Type</th>
+            <th>Content Idea</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>Educational Post</td>
+            <td>Tips for sustainable living</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>Instagram Story</td>
+            <td>Audience poll or quiz</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>Short Video</td>
+            <td>Eco-friendly daily habits</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>Brand Story</td>
+            <td>Our mission and values</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>Product Post</td>
+            <td>Product benefits and uses</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>Engagement</td>
+            <td>Questions and customer feedback</td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>Weekly Review</td>
+            <td>Analyze reach, saves and shares</td>
+        </tr>
+    </table>
+</section>
 
-        <!-- Replace with your GitHub profile URL -->
-        <p>GitHub:
-            <a href="https://github.com/" target="_blank">
-                Visit My GitHub
-            </a>
-        </p>
-    </section>
+<section class="contact" id="contact">
+    <h2>Let's Build Something Meaningful</h2>
+    <p>
+        Strategy, creativity and consistency create a strong brand.
+    </p>
+    <a href="mailto:your.email@example.com" class="btn">
+        Contact Me
+    </a>
+</section>
 
-    <footer>
-        <p>
-            &copy; <span id="year"></span> Shani SK.
-            All Rights Reserved.
-        </p>
-    </footer>
+<footer>
+    <p>© <span id="year"></span> Branding Portfolio | All Rights Reserved</p>
+</footer>
 
-    <script>
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
-    </script>
+<script>
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
 
 </body>
 </html>
