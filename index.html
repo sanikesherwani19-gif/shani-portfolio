@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Branding Portfolio</title>
+<title>Bioderma | Branding Portfolio</title>
 
 <style>
 * {
@@ -16,81 +16,99 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f5f4ed;
-    color: #17221d;
+    background: #f5faff;
+    color: #18314d;
     line-height: 1.6;
 }
 
 header {
-    background: #17221d;
-    color: white;
-    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 7%;
+    background: white;
+    box-shadow: 0 2px 12px #dce8f2;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 26px;
     font-weight: bold;
-    color: #b9f36a;
+    color: #087bbd;
+    letter-spacing: 2px;
 }
 
 nav a {
-    color: white;
     text-decoration: none;
+    color: #18314d;
     margin-left: 18px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 nav a:hover {
-    color: #b9f36a;
+    color: #087bbd;
 }
 
 .hero {
-    padding: 100px 8%;
-    min-height: 75vh;
+    min-height: 80vh;
+    padding: 80px 7%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    background: linear-gradient(120deg, #e5f5ff, #ffffff);
+}
+
+.hero-content {
+    max-width: 550px;
 }
 
 .hero h1 {
-    font-size: 55px;
-    line-height: 1.2;
-    margin: 20px 0;
+    font-size: clamp(40px, 6vw, 65px);
+    line-height: 1.1;
+    margin: 18px 0;
 }
 
 .hero h1 span {
-    color: #608b32;
+    color: #0788c9;
 }
 
 .hero p {
-    max-width: 650px;
-    color: #66736b;
+    color: #587086;
     margin-bottom: 25px;
 }
 
 .btn {
     display: inline-block;
-    width: fit-content;
-    background: #17221d;
+    background: #087fbd;
     color: white;
-    padding: 12px 22px;
+    padding: 13px 22px;
+    border-radius: 30px;
     text-decoration: none;
-    border-radius: 6px;
+    font-weight: bold;
+}
+
+.hero img {
+    width: 43%;
+    max-width: 470px;
+    border-radius: 20px;
+    object-fit: cover;
 }
 
 section {
-    padding: 70px 8%;
+    padding: 70px 7%;
 }
 
-h2 {
-    font-size: 35px;
-    margin-bottom: 15px;
+.section-title {
+    font-size: 34px;
+    margin-bottom: 12px;
 }
 
 .subtitle {
-    color: #66736b;
+    color: #6a8195;
     margin-bottom: 30px;
 }
 
@@ -103,67 +121,66 @@ h2 {
 .card {
     background: white;
     padding: 28px;
-    border-radius: 12px;
-    border: 1px solid #dce2d8;
+    border-radius: 15px;
+    border: 1px solid #dcebf5;
+    box-shadow: 0 5px 20px #dce8f233;
 }
 
 .card h3 {
+    color: #087fbd;
     margin-bottom: 12px;
-    color: #42652b;
 }
 
 .card p, .card li {
-    color: #66736b;
+    color: #61778b;
 }
 
 .card ul {
     padding-left: 20px;
-    margin-top: 10px;
 }
 
-.dark {
-    background: #17221d;
-    color: white;
+.card li {
+    margin: 7px 0;
 }
 
-.dark .subtitle,
-.dark .card p,
-.dark .card li {
-    color: #d0d9d1;
+.number {
+    background: #dff3ff;
+    color: #087fbd;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-.dark .card {
-    background: #26342c;
-    border-color: #3a4b3f;
+.audience {
+    background: #eaf7ff;
 }
 
-.colors {
+.palette {
     display: flex;
     gap: 12px;
     margin-top: 20px;
     flex-wrap: wrap;
 }
 
-.color {
-    padding: 18px;
-    border-radius: 8px;
+.swatch {
+    width: 100px;
+    height: 90px;
+    border-radius: 10px;
+    display: flex;
+    align-items: end;
+    padding: 8px;
+    font-size: 12px;
     font-weight: bold;
 }
 
-.green {
-    background: #b9f36a;
-    color: #17221d;
-}
-
-.cream {
-    background: #f5f4ed;
-    color: #17221d;
-}
-
-.black {
-    background: #17221d;
-    color: white;
-}
+.blue { background: #087fbd; color: white; }
+.white { background: #fff; border: 1px solid #ddd; }
+.pink { background: #ed75a8; color: white; }
+.green { background: #80a84b; color: white; }
 
 table {
     width: 100%;
@@ -172,44 +189,61 @@ table {
 }
 
 th, td {
-    border: 1px solid #dce2d8;
     padding: 14px;
     text-align: left;
+    border: 1px solid #dcebf5;
 }
 
 th {
-    background: #b9f36a;
+    background: #087fbd;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #edf7fd;
 }
 
 .contact {
     text-align: center;
-    background: #b9f36a;
+    background: #dff3ff;
 }
 
 .contact p {
-    margin: 15px 0;
+    margin: 15px 0 25px;
 }
 
 footer {
-    text-align: center;
-    padding: 22px;
-    background: #17221d;
+    background: #12314f;
     color: white;
+    padding: 25px;
+    text-align: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
     header {
         flex-direction: column;
         gap: 15px;
     }
 
-    nav a {
-        margin: 5px;
-        font-size: 14px;
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
     }
 
-    .hero h1 {
-        font-size: 38px;
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero img {
+        width: 100%;
+        max-width: 100%;
     }
 
     .cards {
@@ -217,7 +251,7 @@ footer {
     }
 
     table {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     th, td {
@@ -230,126 +264,138 @@ footer {
 <body>
 
 <header>
-    <div class="logo">BRANDCRAFT.</div>
+    <div class="logo">BIODERMA</div>
     <nav>
         <a href="#home">Home</a>
-        <a href="#selection">Selection</a>
+        <a href="#selection">Brand Selection</a>
         <a href="#audience">Audience</a>
         <a href="#identity">Identity</a>
-        <a href="#content">Content</a>
+        <a href="#content">Content Plan</a>
     </nav>
 </header>
 
+<!-- HOME -->
 <section class="hero" id="home">
-    <p>BRANDING & DIGITAL MARKETING PORTFOLIO</p>
+    <div class="hero-content">
+        <p>SKINCARE BRANDING PORTFOLIO</p>
+        <h1>Healthy Skin.<br><span>Better Life.</span></h1>
+        <p>
+            A branding portfolio exploring Bioderma's brand positioning,
+            target audience, visual identity and digital content strategy.
+            Bioderma is a dermatological skincare brand.
+        </p>
+        <a href="#selection" class="btn">Explore Portfolio →</a>
+    </div>
 
-    <h1>Build a Brand.<br>
-    Create an <span>Identity.</span></h1>
-
-    <p>
-        A strategic approach to choosing the right brand,
-        identifying the target audience, creating a strong
-        brand identity, and planning engaging content.
-    </p>
-
-    <a href="#selection" class="btn">Explore My Portfolio</a>
+    <!-- Replace with a skincare image you are allowed to use -->
+    <img
+        src="https://placehold.co/600x500/e0f4ff/087fbd?text=BIODERMA+SKINCARE"
+        alt="Bioderma skincare portfolio visual">
 </section>
 
+<!-- BRAND SELECTION -->
 <section id="selection">
-    <h2>01. Brand Selection</h2>
-    <p class="subtitle">
-        Selecting a brand concept that solves customer problems
-        and provides value.
-    </p>
+    <h2 class="section-title">01. Brand Selection</h2>
+    <p class="subtitle">Understanding the brand and its market position.</p>
 
     <div class="cards">
         <div class="card">
-            <h3>Brand Concept</h3>
+            <div class="number">01</div>
+            <h3>Why Bioderma?</h3>
             <p>
-                Sample brand: EcoLife — an eco-friendly lifestyle
-                brand offering reusable and sustainable products.
+                Bioderma is a French dermatological skincare brand
+                known for products designed to support different
+                skin needs and skin types.
             </p>
         </div>
 
         <div class="card">
-            <h3>Brand Strategy</h3>
+            <div class="number">02</div>
+            <h3>Brand Positioning</h3>
             <ul>
-                <li>Research the market and competitors.</li>
-                <li>Identify customer needs.</li>
-                <li>Define the brand's unique value.</li>
-                <li>Establish brand goals and positioning.</li>
+                <li>Science-led skincare approach</li>
+                <li>Products for different skin concerns</li>
+                <li>Dermatological expertise</li>
+                <li>Focus on skin tolerance and care</li>
             </ul>
         </div>
     </div>
 </section>
 
-<section id="audience" class="dark">
-    <h2>02. Target Audience Identification</h2>
+<!-- TARGET AUDIENCE -->
+<section class="audience" id="audience">
+    <h2 class="section-title">02. Target Audience Identification</h2>
     <p class="subtitle">
-        Understanding the people most likely to connect with
-        the brand and its products.
+        Identifying the consumers who may be interested in Bioderma products.
     </p>
 
     <div class="cards">
         <div class="card">
             <h3>Demographics</h3>
             <ul>
-                <li>Age: 18–30 years</li>
-                <li>Audience: Students and young professionals</li>
-                <li>Location: Urban and semi-urban areas</li>
-                <li>Interests: Lifestyle and sustainability</li>
+                <li>Age: approximately 18–45</li>
+                <li>All genders</li>
+                <li>Skincare beginners and enthusiasts</li>
+                <li>Consumers seeking routine-based skincare</li>
             </ul>
         </div>
 
         <div class="card">
-            <h3>Audience Behaviour</h3>
+            <h3>Needs & Behaviours</h3>
             <ul>
-                <li>Uses Instagram and YouTube.</li>
-                <li>Looks for useful, affordable products.</li>
-                <li>Values honest brand communication.</li>
-                <li>Responds to educational and visual content.</li>
+                <li>Gentle skincare options</li>
+                <li>Solutions for individual skin concerns</li>
+                <li>Clear product information</li>
+                <li>Reviews and educational skincare content</li>
             </ul>
         </div>
     </div>
 </section>
 
+<!-- BRAND IDENTITY -->
 <section id="identity">
-    <h2>03. Branding Identity</h2>
+    <h2 class="section-title">03. Brand Identity</h2>
     <p class="subtitle">
-        Building a consistent visual style and brand personality.
+        A visual direction inspired by dermatological care and clarity.
     </p>
 
     <div class="cards">
         <div class="card">
-            <h3>Visual Identity</h3>
+            <h3>Brand Colour Palette</h3>
             <p>
-                A clean, modern and natural design that communicates
-                simplicity, trust and sustainability.
+                Blue represents trust and science; white suggests
+                cleanliness; pink and green can provide supporting accents.
             </p>
 
-            <div class="colors">
-                <div class="color green">Lime Green</div>
-                <div class="color cream">Cream</div>
-                <div class="color black">Forest Dark</div>
+            <div class="palette">
+                <div class="swatch blue">Blue</div>
+                <div class="swatch white">White</div>
+                <div class="swatch pink">Pink</div>
+                <div class="swatch green">Green</div>
             </div>
         </div>
 
         <div class="card">
             <h3>Brand Personality</h3>
             <ul>
-                <li>Brand name: EcoLife</li>
-                <li>Tagline: Small Choices, Better Future.</li>
-                <li>Values: Trust, simplicity and sustainability.</li>
-                <li>Tone: Friendly, positive and informative.</li>
+                <li>Scientific and informed</li>
+                <li>Clean and professional</li>
+                <li>Approachable and caring</li>
+                <li>Focused on skin health</li>
             </ul>
+            <p>
+                Portfolio tagline: “Science for healthier-looking skin.”
+                This is a creative portfolio line, not an official slogan.
+            </p>
         </div>
     </div>
 </section>
 
-<section id="content" class="dark">
-    <h2>04. Content Planning</h2>
+<!-- CONTENT PLANNING -->
+<section class="audience" id="content">
+    <h2 class="section-title">04. Content Planning</h2>
     <p class="subtitle">
-        A sample weekly content calendar for social media.
+        Example weekly social media calendar for a skincare brand.
     </p>
 
     <table>
@@ -360,54 +406,57 @@ footer {
         </tr>
         <tr>
             <td>Monday</td>
-            <td>Educational Post</td>
-            <td>Tips for sustainable living</td>
+            <td>Education</td>
+            <td>How to build a simple skincare routine</td>
         </tr>
         <tr>
             <td>Tuesday</td>
-            <td>Instagram Story</td>
-            <td>Audience poll or quiz</td>
+            <td>Stories</td>
+            <td>Skincare questions and polls</td>
         </tr>
         <tr>
             <td>Wednesday</td>
-            <td>Short Video</td>
-            <td>Eco-friendly daily habits</td>
+            <td>Reel</td>
+            <td>Demonstration of a cleansing routine</td>
         </tr>
         <tr>
             <td>Thursday</td>
-            <td>Brand Story</td>
-            <td>Our mission and values</td>
+            <td>Product Focus</td>
+            <td>Introduce a product and explain its intended use</td>
         </tr>
         <tr>
             <td>Friday</td>
-            <td>Product Post</td>
-            <td>Product benefits and uses</td>
+            <td>Myth vs Fact</td>
+            <td>Share evidence-based skincare information</td>
         </tr>
         <tr>
             <td>Saturday</td>
             <td>Engagement</td>
-            <td>Questions and customer feedback</td>
+            <td>Ask followers about their skincare routines</td>
         </tr>
         <tr>
             <td>Sunday</td>
-            <td>Weekly Review</td>
-            <td>Analyze reach, saves and shares</td>
+            <td>Analysis</td>
+            <td>Review reach, saves, shares and comments</td>
         </tr>
     </table>
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
-    <h2>Let's Build Something Meaningful</h2>
+    <h2 class="section-title">Thank You</h2>
     <p>
-        Strategy, creativity and consistency create a strong brand.
+        Brand Selection · Target Audience · Brand Identity · Content Planning
     </p>
-    <a href="mailto:your.email@example.com" class="btn">
-        Contact Me
-    </a>
+    <a href="#home" class="btn">Back to Top ↑</a>
 </section>
 
 <footer>
-    <p>© <span id="year"></span> Branding Portfolio | All Rights Reserved</p>
+    <p>
+        Student Branding Portfolio | Bioderma Case Study |
+        <span id="year"></span>
+    </p>
+    <p>Independent educational project. Not affiliated with Bioderma.</p>
 </footer>
 
 <script>
